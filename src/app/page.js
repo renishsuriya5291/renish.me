@@ -12,8 +12,9 @@ const Home = () => {
       <section className="mb-10 text-center">
         <h2 className="text-4xl font-bold mb-4 animate-fadeIn">About Me</h2>
         <p className="text-lg text-gray-700 max-w-xl mx-auto">
-          Founder of RickMate, a platform with over 250+ users, helping people save money by sharing rides with the principle of "Connect, Commute, and Save." Passionate about developing solutions that make a difference in everyday life, combining technical expertise with real-world impact.
+          Founder of RickMate, a platform with over 250+ users, helping people save money by sharing rides with the principle of &quot;Connect, Commute, and Save.&quot; Passionate about developing solutions that make a difference in everyday life, combining technical expertise with real-world impact.
         </p>
+
         <a
           href="/renish_resume.pdf"
           className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
