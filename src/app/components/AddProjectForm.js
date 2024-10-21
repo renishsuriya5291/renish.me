@@ -41,6 +41,7 @@ const AddProjectForm = () => {
   const resetForm = () => {
     setTitle('');
     setDescription('');
+    setLiveProjectUrl('');
     setUpdateId(null);
   };
 
