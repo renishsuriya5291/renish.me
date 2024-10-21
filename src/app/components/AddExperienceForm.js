@@ -22,10 +22,10 @@ const AddExperienceForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editing) {
-      await fetch(`/api/experience/${editing}`, {
+      await fetch(`/api/experience`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ role, company, description }),
+        body: JSON.stringify({ id: editing, role, company, description }),
       });
     } else {
       await fetch('/api/experience', {
