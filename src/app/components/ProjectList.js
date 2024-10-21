@@ -15,20 +15,23 @@ const ProjectList = () => {
 
   return (
     <section className="my-10 px-4">
-      <h2 className="text-3xl font-semibold mb-5 text-center animate-fadeIn">Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <h2 className="text-4xl font-bold mb-6 text-center animate-fadeIn">Projects</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {projects.map((project) => (
           <div
             key={project._id}
-            className="bg-white shadow-md rounded-lg p-5 transition-transform duration-300 hover:scale-105"
+            className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
           >
-            <h3 className="text-xl font-bold">{project.title}</h3>
-            <p className="text-gray-600">{project.description}</p>
+            <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+            <p className="text-gray-700 mb-4">{project.description}</p>
             <a
               href={project.liveProjectUrl}
               target="_blank"
               rel="noreferrer"
-              className="text-blue-600 hover:underline">{project.liveProjectUrl}</a>
+              className="text-blue-600 hover:underline"
+            >
+              View Live Project
+            </a>
           </div>
         ))}
       </div>

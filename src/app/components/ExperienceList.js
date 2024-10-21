@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import { useEffect, useState } from 'react';
 
 const ExperienceList = () => {
@@ -20,14 +19,14 @@ const ExperienceList = () => {
   }, []);
 
   return (
-    <section className="my-10">
-      <h2 className="text-3xl font-semibold mb-5 text-center animate-fadeIn">Experience</h2>
-      <div className="space-y-4">
+    <section className="my-10 px-4">
+      <h2 className="text-4xl font-bold mb-6 text-center animate-fadeIn">Experience</h2>
+      <div className="space-y-6">
         {experiences.length > 0 ? (
           experiences.map((experience) => (
-            <div key={experience._id} className="bg-white shadow-md rounded-lg p-5 transition-transform duration-300 hover:scale-105">
-              <h3 className="text-xl font-bold">{experience.role} at {experience.company}</h3>
-              <p className="text-gray-600">{experience.description}</p>
+            <div key={experience._id} className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
+              <h3 className="text-2xl font-semibold">{experience.role} at {experience.company}</h3>
+              <p className="text-gray-700">{experience.description}</p>
             </div>
           ))
         ) : (

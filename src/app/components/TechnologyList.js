@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import { useEffect, useState } from 'react';
 
 const TechnologyList = () => {
@@ -20,13 +19,13 @@ const TechnologyList = () => {
   }, []);
 
   return (
-    <section className="my-10">
-      <h2 className="text-3xl font-semibold mb-5 text-center animate-fadeIn">Technologies</h2>
-      <div className="bg-white shadow-md rounded-lg p-5 transition-transform duration-300 hover:scale-105">
+    <section className="my-10 px-4">
+      <h2 className="text-4xl font-bold mb-6 text-center animate-fadeIn">Technologies</h2>
+      <div className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
         {technologies.length > 0 ? (
           <ul className="list-disc pl-5">
             {technologies.map((technology) => (
-              <li key={technology._id} className="text-gray-600">{technology.name}</li>
+              <li key={technology._id} className="text-gray-700">{technology.name}</li>
             ))}
           </ul>
         ) : (
