@@ -12,7 +12,7 @@ const Home = () => {
       <section className="mb-10 text-center">
         <h2 className="text-4xl font-bold mb-4 animate-fadeIn">About Me</h2>
         <p className="text-lg text-gray-700 max-w-xl mx-auto">
-          Hello, It&apos;s Renish Suriya, a passionate developer who enjoys creating
+          Hello, I am Renish Suriya, a passionate developer who enjoys creating
           innovative solutions to complex problems.
         </p>
       </section>
