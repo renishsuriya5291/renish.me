@@ -25,9 +25,8 @@ const EducationList = () => {
         {education.length > 0 ? (
           education.map((edu) => (
             <div key={edu._id} className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
-              <h3 className="text-2xl font-semibold">{edu.degree} in {edu.fieldOfStudy}</h3>
+              <h3 className="text-2xl font-semibold">{edu.degree}</h3>
               <p><strong>Institution:</strong> {edu.institution}</p>
-              <p><strong>Duration:</strong> {edu.duration}</p>
               <p><strong>Description:</strong> {edu.description}</p>
             </div>
           ))
