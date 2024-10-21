@@ -5,6 +5,9 @@ import './globals.css'; // Adjust path as needed
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
+      <head>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+      </head>
       <body className="bg-white text-gray-900">
         <header className="flex flex-col items-center bg-blue-600 text-white py-6">
           <h1 className="text-5xl font-bold mb-4">Renish Suriya</h1>

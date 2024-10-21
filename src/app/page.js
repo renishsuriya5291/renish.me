@@ -23,6 +23,33 @@ const Home = () => {
           Download Resume
         </a>
 
+        <div className="mt-4 flex space-x-4 justify-center">
+          <a
+            href="https://www.linkedin.com/in/renish-suriya-02a579231/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800"
+          >
+            <i className="fab fa-linkedin fa-2x"></i>
+          </a>
+          <a
+            href="https://github.com/renishsuriya5291/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-800 hover:text-gray-600"
+          >
+            <i className="fab fa-github fa-2x"></i>
+          </a>
+          <a
+            href="https://leetcode.com/u/renish096/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-orange-500 hover:text-orange-700"
+          >
+            <i className="fab fa-leetcode fa-2x"></i>
+          </a>
+        </div>
+
       </section>
       <ProjectList />
       <ExperienceList />
