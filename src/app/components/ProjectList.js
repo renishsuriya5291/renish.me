@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useEffect, useState } from 'react';
 
 const ProjectList = () => {
@@ -14,27 +14,17 @@ const ProjectList = () => {
   }, []);
 
   return (
-    <section className="my-10 px-4">
-      <h2 className="text-4xl font-bold mb-6 text-center animate-fadeIn">Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <section className="bg-white p-6 rounded-lg mt-6">
+      <h2 className="text-2xl font-bold mb-4">Projects</h2>
+      <ul>
         {projects.map((project) => (
-          <div
-            key={project._id}
-            className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl"
-          >
-            <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-gray-700 mb-4">{project.description}</p>
-            <a
-              href={project.liveProjectUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="text-blue-600 hover:underline"
-            >
-              View Live Project
-            </a>
-          </div>
+          <li key={project.id} className="mb-4">
+            <strong>{project.title}</strong>
+            <p>{project.description}</p>
+            <a href={project.liveProjectUrl} target="_blank" rel="noopener noreferrer" className="text-highlight">View Live Project</a>
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 };

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useEffect, useState } from 'react';
 
 const ExperienceList = () => {
@@ -6,33 +6,26 @@ const ExperienceList = () => {
 
   useEffect(() => {
     const fetchExperiences = async () => {
-      try {
-        const response = await fetch('/api/experience');
-        const data = await response.json();
-        setExperiences(data.experience);
-      } catch (error) {
-        console.error('Failed to fetch experiences:', error);
-      }
+      const res = await fetch('/api/experience');
+      const data = await res.json();
+      console.log(data);
+      
+      setExperiences(data.experience);
     };
-
     fetchExperiences();
   }, []);
 
   return (
-    <section className="my-10 px-4">
-      <h2 className="text-4xl font-bold mb-6 text-center animate-fadeIn">Experience</h2>
-      <div className="space-y-6">
-        {experiences.length > 0 ? (
-          experiences.map((experience) => (
-            <div key={experience._id} className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
-              <h3 className="text-2xl font-semibold">{experience.role} at {experience.company}</h3>
-              <p className="text-gray-700">{experience.description}</p>
-            </div>
-          ))
-        ) : (
-          <p>No experience to display.</p>
-        )}
-      </div>
+    <section className="bg-white p-6 rounded-lg mt-6">
+      <h2 className="text-2xl font-bold mb-4">Experience</h2>
+      <ul>
+      {experiences.map((experience) => (
+          <li key={experience.id} className="mb-4">
+            <strong>{experience.role}</strong>
+            <p className="text-gray-700 mt-2">{experience.description}</p>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };

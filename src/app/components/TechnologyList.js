@@ -19,18 +19,15 @@ const TechnologyList = () => {
   }, []);
 
   return (
-    <section className="my-10 px-4">
-      <h2 className="text-4xl font-bold mb-6 text-center animate-fadeIn">Technologies</h2>
-      <div className="bg-white shadow-lg rounded-lg p-6 transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
-        {technologies.length > 0 ? (
-          <ul className="list-disc pl-5">
-            {technologies.map((technology) => (
-              <li key={technology._id} className="text-gray-700">{technology.name}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>No technologies to display.</p>
-        )}
+    <section className="bg-white p-6 rounded-lg mt-6">
+      <h2 className="text-2xl font-bold mb-4">Technologies</h2>
+      <div className="flex flex-wrap gap-2">
+        {technologies.map((technology, index) => (
+          <span key={technology.id} className="text-gray-700">
+            {technology.name}
+            {index < technologies.length - 1 && ','} {/* Add comma except for the last item */}
+          </span>
+        ))}
       </div>
     </section>
   );

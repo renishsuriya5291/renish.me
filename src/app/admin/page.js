@@ -14,7 +14,7 @@ const AdminPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (username === 'renish' && password === 'renish') {
+    if (username === 'renidh' && password === 'renidh96') {
       setAuthenticated(true);
     } else {
       alert('Invalid credentials');

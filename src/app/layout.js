@@ -1,27 +1,21 @@
 import Image from 'next/image';
-import './globals.css'; // Adjust path as needed
-
+import './globals.css';
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
       <head>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+          rel="stylesheet"
+        />
       </head>
-      <body className="bg-white text-gray-900">
-        <header className="flex flex-col items-center bg-blue-600 text-white py-6">
-          <h1 className="text-5xl font-bold mb-4">Renish Suriya</h1>
-          <div className="relative w-32 h-32 mb-4 overflow-hidden rounded-full border-4 border-white shadow-lg">
-            <Image
-              src="/images/renish.jpg" // Path to your image in the public folder
-              alt="Renish Suriya"
-              layout="fill"
-              objectFit="cover" // Maintain the aspect ratio while covering the container
-              className="rounded-full transition-transform duration-300 hover:scale-110"
-            />
-          </div>
-        </header>
-        <main className="container mx-auto p-4">{children}</main> {/* Added main section here */}
+      <body className="bg-gray-100 text-gray-800 font-serif">
+        <div className="max-w-5xl mx-auto p-6">{children}</div>
       </body>
     </html>
   );

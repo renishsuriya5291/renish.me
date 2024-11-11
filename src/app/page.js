@@ -1,61 +1,24 @@
 'use client';
-
-import ProjectList from './components/ProjectList';
-import ExperienceList from './components/ExperienceList';
+import { useEffect, useState } from 'react';
+import Header from './components/Header';
 import EducationList from './components/EducationList';
+import ExperienceList from './components/ExperienceList';
+import ProjectList from './components/ProjectList';
 import SkillList from './components/SkillList';
 import TechnologyList from './components/TechnologyList';
 
 const Home = () => {
   return (
-    <main className="min-h-screen bg-gray-50 flex flex-col items-center py-10">
-      <section className="mb-10 text-center">
-        <h2 className="text-4xl font-bold mb-4 animate-fadeIn">About Me</h2>
-        <p className="text-lg text-gray-700 max-w-xl mx-auto mb-6">
-          Founder of RickMate, a platform with over 250+ users, helping people save money by sharing rides with the principle of &quot;Connect, Commute, and Save.&quot; Passionate about developing solutions that make a difference in everyday life, combining technical expertise with real-world impact.
-        </p>
-
-        <a
-          href="/renish_resume.pdf"
-          className="inline-block mb-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-          download
-        >
-          Download Resume
-        </a>
-
-        <div className="mt-4 flex space-x-6 justify-center">
-          <a
-            href="https://www.linkedin.com/in/renish-suriya-02a579231/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 hover:text-blue-800"
-          >
-            <i className="fab fa-linkedin fa-2x"></i>
-          </a>
-          <a
-            href="https://github.com/renishsuriya5291/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-gray-800 hover:text-gray-600"
-          >
-            <i className="fab fa-github fa-2x"></i>
-          </a>
-          <a
-            href="https://leetcode.com/u/renish096/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-orange-500 hover:text-orange-700"
-          >
-            {/* Use a generic code icon if LeetCode icon is not available */}
-            <i className="fas fa-code fa-2x"></i>
-          </a>
-        </div>
-      </section>
-      <ProjectList />
-      <ExperienceList />
+    <main className="min-h-screen py-3">
+      <Header />
       <EducationList />
+      <ExperienceList />
+      <ProjectList />
       <SkillList />
       <TechnologyList />
+      <footer className="mt-6 text-center text-gray-500 text-sm">
+        Last updated: 2024-06-18
+      </footer>
     </main>
   );
 };

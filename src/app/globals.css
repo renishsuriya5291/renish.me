@@ -1,18 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+body {
+    font-family: 'EB Garamond', serif;
+    font-size: larger;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .text-highlight {
+    color: #a51c30;
   }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.5s ease-out forwards;
-}
+  
+  .text-highlight:hover {
+    color: #721c36;
+    cursor: pointer;
+  }
+  
